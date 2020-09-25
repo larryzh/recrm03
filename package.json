@@ -38,7 +38,11 @@
     "test": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "prettify": "prettier --write"
+    "prettify": "prettier --write",
+    "//server": "node-env-run server --exec nodemon",
+    "//dev": "run-p server start",
+    "crud": "node-env-run crud --exec nodemon",
+    "dev": "run-p crud start"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -90,7 +94,14 @@
     "reselect": "4.0.0",
     "sanitize.css": "11.0.0",
     "styled-components": "4.4.1",
-    "swr": "0.3.2"
+    "swr": "0.3.2",
+    "bluebird": "^3.7.2",
+    "pouchdb": "^7.2.2",
+    "react-scripts": "3.4.3",
+    "sqlite3": "^5.0.0",
+    "node-env-run": "^4.0.1",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5"
   },
   "devDependencies": {
     "@babel/cli": "7.7.4",
@@ -163,5 +174,6 @@
     "webpack-hot-middleware": "2.25.0",
     "webpack-pwa-manifest": "4.1.1",
     "whatwg-fetch": "3.0.0"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }

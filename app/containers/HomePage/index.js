@@ -47,6 +47,7 @@ function getData(){
 
 export default function HomePage() {
   const x=getData();
+  const x1='abc'
   return (
     <h>
       {x}
