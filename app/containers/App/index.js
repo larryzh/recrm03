@@ -14,6 +14,9 @@ import { hot } from 'react-hot-loader/root';
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
+import AuthPage from 'containers/AuthPage/Pages/Loadable';
+
+
 import GlobalStyle from '../../global-styles';
 
 function App() {
@@ -21,6 +24,7 @@ function App() {
     <div>
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/Auth" component={AuthPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
